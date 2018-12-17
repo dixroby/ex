@@ -1,0 +1,30 @@
+﻿.general {
+    width: 1000px;
+    height: 600px;
+}
+
+.unamba {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+}
+
+.menu {
+    width: 200px;
+    height: 500px;
+    background-color: blueviolet;
+}
+
+.contenido {
+    width: 700px;
+    height: 600px;
+    float: right;
+    background-color: deepskyblue;
+}
+
+.banner {
+    float: right;
+    width: 100px;
+    height: 600px;
+    background-color: darkslateblue;
+}

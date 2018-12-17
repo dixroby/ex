@@ -67,13 +67,57 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="consulta.aspx" />
+    <Content Include="css.css" />
+    <Content Include="deposito.aspx" />
+    <Content Include="insertar.aspx" />
+    <Content Include="movimiento.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cconsulta.cs" />
+    <Compile Include="consulta.aspx.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consulta.aspx.designer.cs">
+      <DependentUpon>consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deposito.aspx.cs">
+      <DependentUpon>deposito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deposito.aspx.designer.cs">
+      <DependentUpon>deposito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insertar.aspx.cs">
+      <DependentUpon>insertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insertar.aspx.designer.cs">
+      <DependentUpon>insertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="movimiento.aspx.cs">
+      <DependentUpon>movimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movimiento.aspx.designer.cs">
+      <DependentUpon>movimiento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
