@@ -14,10 +14,10 @@ namespace ex
         {
 
         }
-
+        Cconsulta c = new Cconsulta();
         protected void Button1_Click(object sender, EventArgs e)
         {
-             Cconsulta c = new Cconsulta();
+        
             string dnis = txtDni.Text;
 
             DataSet ds = new DataSet(dnis);
@@ -40,7 +40,13 @@ namespace ex
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-           
+    
+
+            Label3.Text = c.retirar(txtNumeroCuenta.Text, txtRetiroo.Text);
+
+
+            tretiro.DataSource = c.verificMonto(txtDni.Text).Tables["dnis"];
+            tretiro.DataBind();
         }
 
         protected void Button4_Click(object sender, EventArgs e)

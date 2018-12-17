@@ -58,35 +58,7 @@ namespace ex
         }
 
 
-        public string retirar(string nc, string m)
-        {
-
-            string mensaje;
-            int insertados;
-            string sql = "insert into values( "+ nc + ",GETDATE()," + m + ")";
-
-            SqlConnection oCon = new SqlConnection(cadenaconxion);
-            SqlCommand cmd = new SqlCommand(sql, oCon);
-            try
-            {
-                oCon.Open();
-                insertados = cmd.ExecuteNonQuery();
-                mensaje = "Nro de registros insertados es " + insertados.ToString();
-                return mensaje;
-            }
-            catch (Exception mm)
-            {
-                mensaje = "el error es " + mm.Message;
-                return mensaje;
-
-            }
-            finally
-            {
-                oCon.Close();
-            }
-
-        }
-
+       
         public string depositar(string dni, string m)
         {
 
@@ -98,6 +70,37 @@ namespace ex
             string sql = "Update Cuentaahorros  set SaldoApertura = SaldoApertura + '" + m + "' WHERE(NroCuenta = '" + dni + "') ";
 
             
+            SqlCommand cmd = new SqlCommand(sql, oCon);
+            try
+            {
+                oCon.Open();
+                insertados = cmd.ExecuteNonQuery();
+                mensaje = "Nro de registros insertados es " + insertados.ToString();
+                return mensaje;
+            }
+            catch (Exception mms)
+            {
+                mensaje = "el error es " + mms.Message;
+                return mensaje;
+
+            }
+            finally
+            {
+                oCon.Close();
+            }
+
+        }
+        public string retirar(string dni, string m)
+        {
+
+            string mensaje;
+            int insertados;
+            SqlConnection oCon = new SqlConnection(cadenaconxion);
+
+
+            string sql = "Update Cuentaahorros  set SaldoApertura = SaldoApertura - '" + m + "' WHERE(NroCuenta = '" + dni + "') ";
+
+
             SqlCommand cmd = new SqlCommand(sql, oCon);
             try
             {

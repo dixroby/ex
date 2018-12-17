@@ -29,8 +29,8 @@
             <br />
             retirar<p>
             ingrese monto de retiro&nbsp;&nbsp;
-            <asp:TextBox ID="txtMonto" runat="server"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;<asp:TextBox ID="txtRetiroo" runat="server"></asp:TextBox>
+                &nbsp;
             <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="retirar" />
         </p>
             <p>
